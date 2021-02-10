@@ -1,9 +1,9 @@
 # Data146
 
-###Hello
+### Hello
 
 ## Informal Exercises
 [Informal Exercise 1]
 
-##Projects
+## Projects
 [Project 1](https://samupdike.github.io/Data146/Project1.md)
