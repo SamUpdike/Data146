@@ -1,11 +1,26 @@
 # Project 1
 
-#### Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.
+### Question 1
+**Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.**
 
   A package is a distribution of software in an archive file. In python, this takes the form of a collection of modules (file with functions or variables). 
   A library is a collection of modules or functions that can be called from within a program
+  
   Steps for working with python packages/libraries:
+  
+  - When using PyCharm, packages can be installed by going to settings, then Python Interpreter, the (+) at the bottom left, and then adding whichever packages you would like.
+  - When in the actual .py file, libraries are accessed by called using import, for example: 
 
+
+  `import numpy`
+  
+  `import pandas`
+  
+  Abbreviations are commonly used to make calling the library easier such as:
+  
+  `import pandas`
+  
+  `pd.readtsv()`
 
 
 
