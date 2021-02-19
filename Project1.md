@@ -111,7 +111,7 @@ Both of these will return the location of whatever you ask them to find.
 - df.iloc(5) would return the row in at index 5, refering to a constant location.
 
 To return a series use something like `data.iloc[4:10]`  
-![]ilocex.png
+![]ilocex.png  
 
 #### Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 #### Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
