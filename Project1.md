@@ -41,7 +41,7 @@ Rows and columns are also called data vectors
 
 
 ### Question 3
-***Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?***
+**Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?**
 
 We can look at all of the years entered in the data frame by using this code:  
 `years = data['year'].unique()`  
@@ -65,7 +65,7 @@ As we can see Rwanda in 1992 has the lowest life expecancy, likely due to the Rw
 
 
 ### Question 5
-**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?**
 
 Create new column:  
 `data['popbygdp'] = data['pop'] * data['gdpPercap']`  
@@ -80,7 +80,7 @@ Sort by year/nation:
 
 
 ### Question 6  
-**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
+**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.**
 
 &
 - AND, returns true if both objects compared are the same, was used in prior question to only return observations with correct year & country
@@ -97,7 +97,7 @@ Sort by year/nation:
 
 
 ### Question 7 
-**Describe the difference be tween .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
+**Describe the difference be tween .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
 Both of these will return the location of whatever you ask them to find.  
 
@@ -112,7 +112,7 @@ To return a series use something like `data.iloc[4:10]`
 ![](ilocex.png)  
 
 ### Question 8
-**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
 
 An API is an Application programming interface. This is an intermediary in which two programs can communicate and share information with each other. It can also be used to pull data off of the internet.
 
@@ -134,11 +134,11 @@ with open(data_store, 'coviddaily.csv') as f:
 df = pd.read_csv('coviddaily.csv')`
 
 ### Question 9
-**Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+**Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?**
 
 The apply() function in pandas allows for you to use some other function to an entire series. Whatever function is being applied to the data frame will itterate along the entire axis of the frame. This is considerably easier to do than creating a loop. 
 
 ### Question 10
-**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?**
 
 Download SQL!!! Then views can be created with ease to determine a subset with high levels of specificity. Additionally, dataframes can be analysed without making permanant changes or creating new data frames every time.
