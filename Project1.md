@@ -76,13 +76,42 @@ Sort by year/nation:
 `q5df = data[selection]` 
 `q5df = q5df.sort_values(by=['popbygdp'], ascending = False)`  
 
-![]q5gpd.png
+![]q5gdp.png  
+
+
+### Question 6  
+**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
+
+&
+- AND, returns true if both objects compared are the same, was used in prior question to only return observations with correct year & country
+
+==
+- Equal, 6==6 is True, 6==5 is False
+
+|
+- OR, similarly used to &, however only one of the combined cases may be True, so either year OR country, but not both.
+
+^
+- Exlusive OR/XOR, compares the binary representation of objects and returns their combined integer. I honestly have no idea how to use this practically.
+- `output = 6^3`
+- output would now return 5  
 
 
 
-#### You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
+### Question 7 
+**Describe the difference be tween .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
-#### Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
+Both of these will return the location of whatever you ask them to find.  
+
+.loc will return the value at the searched index with the label you input
+- df.loc(5) would return the row with the index with the name '5'
+- Can create confusion if you have sorted an old dataframe into a new one, as index labeled '5' is no longer at index 5
+
+.iloc will return the index at the searched value
+- df.iloc(5) would return the row in at index 5, refering to a constant location.
+
+To return a series use something like `data.iloc[4:10]`  
+![]ilocex.png
 
 #### Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 #### Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
