@@ -32,7 +32,8 @@ Here python is using a fuction to read a comma separated value file, however bec
   
 To check and see if the data frame was filled correctly, we can check using:  
 `data.head(10)`  This will show the first 5 rows of the data
-To show additional stats on the data frame use:
+
+To show additional stats on the data frame use:  
 `data.info()` This will provide information like no. of columns, entries, column names, etc...  
 
 Rows and columns are also called data vectors
@@ -42,6 +43,13 @@ Rows and columns are also called data vectors
 #### Question 3
 ***Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?***
 
+We can look at all of the years entered in the data frame by using this code:  
+`years = data['year'].unique()`  
+This will output: 
+>array([1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002,
+       2007])   
+
+We can see that there are 5 year intervals between each observation, thus to update the data set we would take 2012 and 2017. To update this, there would be a total of 284 new outcomes (2 years * 142 nations in the data)
 
 #### Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 
