@@ -118,6 +118,21 @@ An API is an Application programming interface. This is an intermediary in which
 
 Here is an example of pulling covid data off a web page:
 
+ `#URL for the covid data  
+url = 'https://api.covidtracking.com/v1/states/daily.csv'
+
+#Create location for data to be exported  
+data_store = './data/coviddaily.csv'
+
+#Pull data from API using requests  
+coviddata = requests.get(url)
+
+#write the data into local file  
+with open(data_store, 'coviddaily.csv') as f:
+    f.write(coviddata.content)
+    
+df = pd.read_csv('coviddaily.csv')`
+
 ### Question 9
 **Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
