@@ -76,7 +76,7 @@ Sort by year/nation:
 `q5df = data[selection]` 
 `q5df = q5df.sort_values(by=['popbygdp'], ascending = False)`  
 
-![]q5gdp.png  
+![](q5gdp.png)   
 
 
 ### Question 6  
@@ -89,12 +89,10 @@ Sort by year/nation:
 - Equal, 6==6 is True, 6==5 is False
 
 |
-- OR, similarly used to &, however only one of the combined cases may be True, so either year OR country, but not both.
+- OR, similarly used to &, where at least one of the combined cases must be True, so either year OR country, or both, would be true.
 
 ^
-- Exlusive OR/XOR, compares the binary representation of objects and returns their combined integer. I honestly have no idea how to use this practically.
-- `output = 6^3`
-- output would now return 5  
+- Exlusive OR/XOR, requires that only one of the combined cases be True, so either year or country, but not both, would be true.
 
 
 
@@ -111,8 +109,21 @@ Both of these will return the location of whatever you ask them to find.
 - df.iloc(5) would return the row in at index 5, refering to a constant location.
 
 To return a series use something like `data.iloc[4:10]`  
-![]ilocex.png  
+![](ilocex.png)  
 
-#### Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
-#### Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-#### Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+### Question 8
+**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+
+An API is an Application programming interface. This is an intermediary in which two programs can communicate and share information with each other. It can also be used to pull data off of the internet.
+
+Here is an example of pulling covid data off a web page:
+
+### Question 9
+**Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+
+The apply() function in pandas allows for you to use some other function to an entire series. Whatever function is being applied to the data frame will itterate along the entire axis of the frame. This is considerably easier to do than creating a loop. 
+
+### Question 10
+**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+
+Download SQL!!! Then views can be created with ease to determine a subset with high levels of specificity. Additionally, dataframes can be analysed without making permanant changes or creating new data frames every time.
