@@ -3,30 +3,45 @@
 ### Question 1
 **Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.**
 
-  A package is a distribution of software in an archive file. In python, this takes the form of a collection of modules (file with functions or variables). 
-  A library is a collection of modules or functions that can be called from within a program
+A package is a distribution of software in an archive file. In python, this takes the form of a collection of modules (file with functions or variables). 
+A library is a collection of modules or functions that can be called from within a program
   
-  Steps for working with python packages/libraries:
+Steps for working with python packages/libraries:
   
   - When using PyCharm, packages can be installed by going to settings, then Python Interpreter, the (+) at the bottom left, and then adding whichever packages you would like.
   - When in the actual .py file, libraries are accessed by called using import, for example: 
 
 
-  `import numpy`
+`import numpy`  
+`import pandas`
   
-  `import pandas`
-  
-  Abbreviations are commonly used to make calling the library easier such as:
-  
-  `import pandas`
-  
-  `pd.readtsv()`
+Abbreviations are commonly used to make calling the library easier such as:
+
+`import pandas as pd`  
+`pd.readtsv()`
 
 
+#### Question 2  
+**Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?**
 
-#### Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
+A dataframe is a container in python what holds data in an x and y axis. Pandas is a common library to use when working with dataframes. Data can be imported into a data frame from a separated values file easily.  
+For example here is our gapminder.tsv file uploaded to a data frame:  
+`data = pd.read_csv('./data/gapminder.tsv', sep = '\t')`  
+  
+Here python is using a fuction to read a comma separated value file, however because our file is tab separated, we need to specify that with the `sep = '\t'`   
+  
+To check and see if the data frame was filled correctly, we can check using:  
+`data.head(10)`  This will show the first 5 rows of the data
+To show additional stats on the data frame use:
+`data.info()` This will provide information like no. of columns, entries, column names, etc...  
 
-#### Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+Rows and columns are also called data vectors
+  
+
+
+#### Question 3
+***Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?***
+
 
 #### Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 
