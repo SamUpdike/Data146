@@ -71,3 +71,34 @@ plt.show()
 
 Here we can see both charts show similar information. I personally prefer the original, non-transformed, chart. This is because we do not loose the quantitative data on the X-axis, as the years are still present. This data doe not contain a large tail or outliers, and thus I do not see an added benefit of a logarithmic transformation.
 
+### Question 4
+#### Which of the two resulting box and whiskers plots best communicates the change in population amongst all of these countries from 1952 to 2007?
+
+Here we have two box and whisker plots for population by year. The unaltered one has data that is too spread out to read effectively on the Y-axis. To resolve this, the second plot has undergone a log transformation on population which visually compacts the Y-axis and allows us to make proper comparasons between each of the boxes between years.
+
+![PopBox1](https://user-images.githubusercontent.com/70855947/109905364-a87cde80-7c6c-11eb-9fb4-a32dd2f6877a.png)
+```
+#Create a box and whisker plot in SeaBorn
+
+plt.figure(figsize=(8, 8))
+sns.boxplot(x=data['year'], y=data['pop'], color='darkcyan')
+plt.ylabel('Population (Billions)', fontsize = 16)
+plt.xlabel('Year', fontsize = 16)
+plt.savefig('PopBox1.png', bbox_inches='tight')
+plt.show()
+```
+
+
+![PopBox2](https://user-images.githubusercontent.com/70855947/109905341-a024a380-7c6c-11eb-86bd-15b0f11760e5.png)
+```
+#Create a box and whisker plot in SeaBorn using a log transformation
+
+plt.figure(figsize=(8, 8))
+sns.boxplot(x=data['year'], y=np.log10(data['pop']), color='darkcyan')
+plt.ylabel('$\log_{10}$ Population (Billions)', fontsize = 16)
+plt.xlabel('Year', fontsize = 16)
+plt.savefig('PopBox2.png', bbox_inches='tight')
+plt.show()
+```
+
+
