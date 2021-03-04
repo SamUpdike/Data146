@@ -1,4 +1,4 @@
-# Project 1
+# Project 2
 
 ### Question 1
 #### Describe continuous, ordinal and nominal data. Provide examples of each. Describe a model of your own construction that incorporates variables of each type of data. You are perfectly welcome to describe your model using english rather than mathematical notation if you prefer. Include hypothetical variables that represent your features and target.
@@ -13,3 +13,14 @@ A model that would include all of these data types is measuring the fuel efficie
 - Fuel efficiency (target/dependent variable) and factors like produced horsepower would be continous
 - Number of doors or type of drivetrain (4WD, AWD, Front and Rear wheel drive) would be ordinal
 - Body type (sedan, SUV, coupe) or manufacturer would be nominal  
+
+### Question 2
+#### Symmetric Data
+![](NoSkew.png)  
+- In the beta distrobution the alpha and beta parameters are both equal, which gives you a mean and median value of around the 50th percentile
+#### Left Skewed Data
+![](LeftSkew.png)   
+- Here the alpha value is 50.0 and the beta is 5.0, which makes the data left tailed (the mean is less than the median)
+#### Right Skewed Data
+![](RightSkew.png)   
+- Here the alpha value is 5.0 and the beta is 50.0, which makes the data right tailed (the mean is greater than the median)
