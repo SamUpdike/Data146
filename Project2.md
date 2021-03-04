@@ -24,3 +24,50 @@ A model that would include all of these data types is measuring the fuel efficie
 #### Right Skewed Data
 ![](RightSkew.png)   
 - Here the alpha value is 5.0 and the beta is 50.0, which makes the data right tailed (the mean is greater than the median)
+
+
+### Question 3
+####  Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?
+
+Below are two histograms representing life expectancy by number of nations from the years 1952 and 2007 from our gampminder dataset.
+
+![LifeExpHist1 (1)](https://user-images.githubusercontent.com/70855947/109902248-31454b80-7c68-11eb-9f24-45ef526bd900.png)
+
+
+```
+#Create 1952 and 2007 index
+idx_52 = data['year'] == 1952
+idx_07 = data['year'] == 2007
+
+#Create dataframes for both years
+df_52 = data[idx_1952]
+df_07 = data[idx_2007]
+
+#Create histogram
+plt.figure(figsize=(8,8))
+plt.hist(df_52['lifeExp'], rwidth = 0.85, label = 1952, alpha = 0.5, color = 'firebrick')
+plt.hist(df_07['lifeExp'], rwidth = 0.85, label = 1952, alpha = 0.5, color = 'steelblue')
+plt.xlabel("Life Expectancy", fontsize = 16)
+plt.ylabel("Number of countries", fontsize = 16)
+plt.legend(loc = 'upper left', fontsize = 16)
+plt.savefig('LifeExpHist1.png', bbox_inches='tight')
+plt.show()
+```
+
+![LifeExpHist2 (1)](https://user-images.githubusercontent.com/70855947/109902270-399d8680-7c68-11eb-8bc5-c755544eb7d2.png)
+
+```
+#Create histogram with a logarithmic transformation
+
+plt.figure(figsize=(8,8))
+plt.hist(np.log10(df_52['lifeExp']), rwidth = 0.85, label = 1952, alpha = 0.5, color = 'firebrick')
+plt.hist(np.log10(df_07['lifeExp']), rwidth = 0.85, label = 1952, alpha = 0.5, color = 'steelblue')
+plt.xlabel("$\log_{10} Life Expectancy$", fontsize = 16)
+plt.ylabel("Number of countries", fontsize = 16)
+plt.legend(loc = 'upper left', fontsize = 16)
+plt.savefig('LifeExpHist2.png', bbox_inches='tight')
+plt.show()
+```
+
+Here we can see both charts show similar information. I personally prefer the original, non-transformed, chart. This is because we do not loose the quantitative data on the X-axis, as the years are still present. This data doe not contain a large tail or outliers, and thus I do not see an added benefit of a logarithmic transformation.
+
