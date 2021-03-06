@@ -31,22 +31,27 @@ A model that would include all of these data types is measuring the fuel efficie
 
 Below are two histograms representing life expectancy by number of nations from the years 1952 and 2007 from our gampminder dataset.
 
-![LifeExpHist1 (1)](https://user-images.githubusercontent.com/70855947/109902248-31454b80-7c68-11eb-9f24-45ef526bd900.png)
+![CorrLifeExpHist1](https://user-images.githubusercontent.com/70855947/110215545-63c59300-7e78-11eb-8708-fbc9f6f2ded6.png)
+
 
 
 ```
-#Create 1952 and 2007 index
-idx_52 = data['year'] == 1952
-idx_07 = data['year'] == 2007
-
-#Create dataframes for both years
-df_52 = data[idx_1952]
-df_07 = data[idx_2007]
+min_year = df['year'].min()
+max_year = df['year'].max()
+min_pop = df['lifeExp'].min()
+max_pop = df['lifeExp'].max()
+n_bins = 10
+my_bins = np.linspace(min_pop, max_pop, n_bins + 1)
+my_bins2 = np.linspace(np.log10(min_pop), np.log10(max_pop), n_bins + 1)
+idx_min_year = df['year'] == min_year
+idx_max_year = df['year'] == max_year
+df_min_year = df[idx_min_year]
+df_max_year = df[idx_max_year]
 
 #Create histogram
 plt.figure(figsize=(8,8))
-plt.hist(df_52['lifeExp'], rwidth = 0.85, label = 1952, alpha = 0.5, color = 'firebrick')
-plt.hist(df_07['lifeExp'], rwidth = 0.85, label = 1952, alpha = 0.5, color = 'steelblue')
+plt.hist(df_min_year['lifeExp'], rwidth = 0.85, label = 1952, bins = my_bins, alpha = 0.5, color = 'firebrick')
+plt.hist(df_max_year['lifeExp'], rwidth = 0.85, label = 1952, bins = my_bins, alpha = 0.5, color = 'steelblue')
 plt.xlabel("Life Expectancy", fontsize = 16)
 plt.ylabel("Number of countries", fontsize = 16)
 plt.legend(loc = 'upper left', fontsize = 16)
@@ -54,14 +59,14 @@ plt.savefig('LifeExpHist1.png', bbox_inches='tight')
 plt.show()
 ```
 
-![LifeExpHist2 (1)](https://user-images.githubusercontent.com/70855947/109902270-399d8680-7c68-11eb-8bc5-c755544eb7d2.png)
+![CorrLifeExpHist2](https://user-images.githubusercontent.com/70855947/110215554-67f1b080-7e78-11eb-8ce6-7b651205a817.png)
 
 ```
 #Create histogram with a logarithmic transformation
 
 plt.figure(figsize=(8,8))
-plt.hist(np.log10(df_52['lifeExp']), rwidth = 0.85, label = 1952, alpha = 0.5, color = 'firebrick')
-plt.hist(np.log10(df_07['lifeExp']), rwidth = 0.85, label = 1952, alpha = 0.5, color = 'steelblue')
+plt.hist(np.log10(df_min_year['lifeExp']), rwidth = 0.85, label = 1952, bins = my_bins, alpha = 0.5, color = 'firebrick')
+plt.hist(np.log10(df_max_year['lifeExp']), rwidth = 0.85, label = 1952, bins = my_bins, alpha = 0.5, color = 'steelblue')
 plt.xlabel("$\log_{10} Life Expectancy$", fontsize = 16)
 plt.ylabel("Number of countries", fontsize = 16)
 plt.legend(loc = 'upper left', fontsize = 16)
