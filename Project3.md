@@ -33,5 +33,31 @@ These models did not perform any better than the data with the asking prices. Ag
 ### Question 5
 #### Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. Train and test each of the three previous model types/specifications. What was the predictive power of each model? Interpret and assess your output.
 
+With the zip codes appended from data the scores for the regressions were:
+
+| KFold (10 folds) | Asking Price| Actual Price|
+| :---             |    :----:   |         ---:|
+| Training         | 0.281       | 0.339       |
+| Testing          | 0.168       | 0.253       |
+
+
+|Standardized KFold| Asking Price| Actual Price|
+| :---             |    :----:   |         ---:|
+| Training         | 0.281       | 0.340       |
+| Testing          | 0.157       | 0.250       |
+
+
+| Ridge Regression | Asking Price| Actual Price|
+| :---             |    :----:   |         ---:|
+| Training         | 0.280       | 0.338       |
+| Testing          | 0.225       | 0.284       |
+
+
+We can see clearly from these results that the inclusion of zip codes greatly improved the predictive power of each model, in all three instances from both data sets. Breaking it down further, the actual price models have a higher predictive power than their asking price counterparts. Dispite some experimentation with model parameters, I could not find significant differences between the models (Kfold, standardized, and a ridge regression) in training, however the ridge regression models seemed to have less over-fit models, as the difference between training and testing was the smallest for both datasets. One possible reason for this is certain zip codes could contain larger homes, yet not have a significant price changes, which could bring an issue with correlations between the feature variables.  
+
+Regardless, all of these models are slightly over fit. In this case these models do a decent job of describing the data used to make the model (internal validity), however, when these models are applied to the greater Charleston housing market, they begin to suffer slightly in terms of accuracy (external validity).
+
+
+
 ### Question 6
 #### Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)?
