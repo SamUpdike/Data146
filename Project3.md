@@ -31,7 +31,7 @@ These models did not perform any better than the data with the asking prices. Ag
 
 
 ### Question 5
-#### Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. Train and test each of the three previous model types/specifications. What was the predictive power of each model? Interpret and assess your output.
+#### Regressions with ZIP code data
 
 With the zip codes appended from data the scores for the regressions were:
 
@@ -60,6 +60,6 @@ Regardless, all of these models are slightly over fit. In this case these models
 
 
 ### Question 6
-#### Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)?
+#### Finally, consider the model that produced the best results. 
 
 My best model is the ridge regression run on the actual price data with zip codes included. Again, this model is slightly overfit, and thus would suffer in terms of external validity. This could be due to the number of feature variables that are likely correleated with each other (bath and bedrooms, and squarefootage) used to create the model. If I were to create some models for Zillow, I feel that because the housing market must varry so greately between zip codes, it might be worth having a separate model run for each zip. Additionally, feature variables could be changed to include something like home age. This would not be nearly as correlated with squarefootage as the number of bed or baths, but could add valuble insight into the housing market.
