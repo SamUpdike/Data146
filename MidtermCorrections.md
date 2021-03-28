@@ -139,7 +139,7 @@ The reason for this error was the same as #18, I used my XMI set instead of the 
 ### Question 22: 	
 Which of the above models estimates the smallest coefficient for the variable that is most correlated (in terms of the absolute value of the correlation coefficient) with the target?
 
-Results:
+Results:  
 LinReg = 0.82961930428045, RidReg = 0.8288892465528181, LasReg = 0.8200140807502059
 
 This shows that the Lasso Regression has the lowest coefficient for the median income variable.
@@ -196,7 +196,7 @@ print('MSE Testing: ' + format(r_tst_mse[idx], '.5f'))
 ```
 
 #### Correction: 
-1) I was still basing the determination for the alpha value on the R^2 coefficient scores
+1) I was still basing the determination for the alpha value on the R^2 coefficient scores  
 2) I was taking the np.argmax of the ridge test w. MSE to determine the IDX variable, which was resulting in an incorrect alpha value.
 
 
