@@ -1,6 +1,9 @@
 # Data146
 
 
+## Midterm Corrections
+[Corrected Answers](https://samupdike.github.io/Data146/MidtermCorrections.html)
+
 ## Projects
 [Project 1](https://samupdike.github.io/Data146/Project1.html)
 
