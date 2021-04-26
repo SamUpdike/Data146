@@ -31,7 +31,9 @@ Testing Values:
 |100|0.499|0.497|
 |500|0.505|0.506|
 |1000|0.499|0.501|
-|5000|0.507|0.510|
+|5000|0.507|0.510| 
+
+
 
 As we can see from the table, the 5000 tree run provided the most accurate results of all four runs.  
 
@@ -51,5 +53,13 @@ With the reclassed target, I got a testing value of 0.537 at 74 and then a value
 Here the values were 0.551 for training and 0.549 for testing.
 
 ### Random Forest
+
+Testing Values:
+|Number of Trees| Scaled | Unscaled|
+|-|-|-|
+|100|0.516|0.486|
+|500|0.510|0.492|
+|1000|0.509|0.493|
+|5000|0.507|0.489| 
 
 
