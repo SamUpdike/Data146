@@ -27,7 +27,6 @@ the scaled and unscaled features.
 
 Testing Values:
 |Number of Trees| Scaled | Unscaled|
-|-|-|-|
 |100|0.499|0.497|
 |500|0.506|0.505|
 |1000|0.501|0.499|
