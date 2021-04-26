@@ -29,9 +29,9 @@ Testing Values:
 |Number of Trees| Scaled | Unscaled|
 |-|-|-|
 |100|0.499|0.497|
-|500|0.505|0.506|
-|1000|0.499|0.501|
-|5000|0.507|0.510| 
+|500|0.506|0.505|
+|1000|0.501|0.499|
+|5000|0.510|0.507| 
 
 
 
@@ -48,6 +48,9 @@ Here we ran the same tests, however for the wealthC classes, 2 and 3 were merged
 
 With the reclassed target, I got a testing value of 0.537 at 74 and then a value of 0.511 at 71 for the distance weighted KNN run.
 
+![KNN2NS](https://user-images.githubusercontent.com/70855947/116033778-0821b580-a630-11eb-8592-3ca880f182b9.png)
+![KNN2S](https://user-images.githubusercontent.com/70855947/116033788-1079f080-a630-11eb-954e-ce9753309ae0.png)
+
 ### Logistic Regression
 
 Here the values were 0.551 for training and 0.549 for testing.
@@ -61,5 +64,14 @@ Testing Values:
 |500|0.510|0.492|
 |1000|0.509|0.493|
 |5000|0.507|0.489| 
+
+### Effects of re-classing the target:
+
+Re-classing the target by merging classes 2 and 3 did not seem to have any major effects on the accuracy of the data based of the testing scores. This must be either because the differences in the features required to predict a value of 2 or 3 were significant enough that there was little error created in determining between values 2 and 3. A more likely possibility is that there simply were not enough observations for either 2 or 3 to make a large difference when merged. 
+
+
+## Conclusion:
+
+
 
 
