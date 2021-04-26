@@ -10,8 +10,8 @@ Without distance as a weight I got a max testing score of 0.561 at a value of 55
 ![KNN1NS](https://user-images.githubusercontent.com/70855947/116032893-749bb500-a62e-11eb-8ffa-b591cf928459.png)  
 
 
-With distance as a weight I got a max testing score of 0.512 at a value of 76.
-![KNN1S](https://user-images.githubusercontent.com/70855947/116032930-83826780-a62e-11eb-8347-b8d2b4ccabca.png)
+With distance as a weight I got a max testing score of 0.512 at a value of 76.  
+![KNN1S](https://user-images.githubusercontent.com/70855947/116032930-83826780-a62e-11eb-8347-b8d2b4ccabca.png)  
 
 
 Here I prefer the model without distance, as it performs marginally better, but is much less overfit than the other.
@@ -72,6 +72,5 @@ Re-classing the target by merging classes 2 and 3 did not seem to have any major
 
 ## Conclusion:
 
-
-
+As far as which model is best suited for predicting wealth classes based off this data, my highest testing value of all was the KNN (no distance weights) without the reclasses data. This yielded a testing value of 0.561. This value only marginally better then many of the other models, which all seemed to perform consistanly decent in their testing values. 
 
