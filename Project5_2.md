@@ -25,7 +25,9 @@ My logistic regression gave me a training value of 0.553 and a testing value of 
 When running both random forest models, scaled and unscaled, I got similar results to the previous two methods. Additionally, there was little difference here between
 the scaled and unscaled features. 
 
-Testing Values:
+Testing Values:  
+
+|-|-|-|
 |Number of Trees| Scaled | Unscaled|
 |100|0.499|0.497|
 |500|0.506|0.505|
@@ -56,7 +58,8 @@ Here the values were 0.551 for training and 0.549 for testing.
 
 ### Random Forest
 
-Testing Values:
+Testing Values:  
+
 |Number of Trees| Scaled | Unscaled|
 |-|-|-|
 |100|0.516|0.486|
