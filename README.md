@@ -11,6 +11,7 @@
 
 [Project 3](https://samupdike.github.io/Data146/Project3.html)
 
+[Project 5.1](https://samupdike.github.io/Data146/Project5_1.html)
 
 [Project 5.2](https://samupdike.github.io/Data146/Project5_2.html)
 
