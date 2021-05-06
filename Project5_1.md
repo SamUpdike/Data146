@@ -1,5 +1,22 @@
 # Project 5.1
 
+## Data Processing:
+
+``` 
+persons = pd.read_csv("./data/persons.csv")
+check_nan = persons['age'].isnull().values.any()
+persons.dropna(inplace = True)
+persons = persons.reset_index()
+
+
+persons['age'] = persons['age'].astype(int)
+persons['edu'] = persons['edu'].astype(int)
+
+X = np.array(persons.drop(["wealthC", "wealthI"], axis = 1))
+y = persons.wealthC
+y1 = persons.wealthI
+```
+
 ## WealthC as the target variable
 
 ### Linear Regression:  
@@ -29,9 +46,9 @@ Testing score for this value: 0.735
 
 ### Lasso Regression:
 
-Optimal alpha value: 0.000277
-Training score for this value: 0.736
-Testing score for this value: 0.735
+Optimal alpha value: 0.000277  
+Training score for this value: 0.736  
+Testing score for this value: 0.735  
 
 ![WCLasso](https://user-images.githubusercontent.com/70855947/117192400-ad1a5c00-adaf-11eb-849e-552bb06b5dcd.png)
 
@@ -71,5 +88,13 @@ Training score for this value: 0.826
 Testing score for this value: 0.825  
 
 ![WILasso](https://user-images.githubusercontent.com/70855947/117193028-65480480-adb0-11eb-99cd-fdee2eb3d867.png)
+
+## Results:
+
+### Which of the models produced the best results in predicting wealth of all persons throughout the smaller West African country being described? 
+
+For me, the two best models were the ridge and lasso regressions for the wealthI target variable in terms of R^2 scores with 0.825 testing values for both. This was followed closely by the linear regressions for the wealthI target as well. Because the wealthI models consistently outperform the wealthC target models, I would assume that the wealthI data is described much better by the features. 
+
+For both targets, I had almost no difference between the lasso and ridge regressions, and no meaningful differences between the standardized and non-standardized linear regressions. 
 
 
